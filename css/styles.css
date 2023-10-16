@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+:root{
+    --dark: #0d1321;
+    --grey: #e5e5e5;
+    --blue: #14213d;
+    --blue-dark: #1d3557;
+    --white: #f1faee;
+    --warning: #fca311;
+    --danger: #e63946;
+    --transition: all .3s;
+    --fs-h1: 3rem;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+label{
+    font-size: 1.3rem;
+    margin-bottom: .4rem;
+}
+input, button{
+    padding: 1rem;
+    outline: none;
+    font-size: 1.3rem;
+    border: 1px solid var(--dark);
+}
+button{
+    cursor: not-allowed;
+    background-color: var(--blue);
+    color: var(--white);
+    transition: var(--transition);
+}
+button:hover{
+    background-color: var(--blue-dark);
+}
+button i{
+    pointer-events: none;
+}
+.page-container{
+    position: relative;
+    min-height: 100vh;
+}
+/* HEADER */
+.header{
+    text-align: center;
+    background-color: var(--blue);
+    color: var(--white);
+    line-height: 8rem;
+}
+.header h1{
+    font-size: var(--fs-h1);
+}
+
+/* SEARCH */
+.container{
+    padding: 0 5% 2rem;
+}
+#formSearch{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2rem;
+}
+#searchInput{
+    min-width: 30rem;
+}
+
+#openModal{
+    text-transform: uppercase;
+    font-weight: 600;
+    margin: 2rem 0 0;
+    cursor: pointer;
+}
+/* MAIN */
+.table{
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    border: 1px solid var(--dark);
+}
+#table-container{
+    padding-bottom: 12rem;
+}
+.table thead tr{
+    background-color: var(--blue-dark);
+    color: var(--white);
+}
+.table thead tr th{
+    padding: 1rem;
+    font-size: 1.5rem;
+}
+.table tbody tr td{
+    padding: .5rem;
+    font-size: 1.3rem;
+}
+.table tbody tr td button{
+    cursor: pointer;
+}
+.actions{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .5rem;
+}
+.warning{
+    background-color: var(--warning);
+}
+.danger{
+    background-color: var(--danger);
+}
+#noUsers{
+    font-size: 2rem;
+    padding: 2rem;
+}
+
+/* FOOTER */
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--blue);
+    text-align: center;
+    color: var(--white);
+    font-weight: 400;
+    font-size: 1.3rem;
+    padding: 1rem;
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+/* MODAL */
+.modal{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: var(--white);
+    box-shadow: 10px 8px 6px -6px var(--dark);
+    padding: 1rem;
+    border-radius: .5rem;
+    display: none;
+}
+.modal.active{
+    display: block;
+}
+.error{
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--danger);
+    padding: 1rem;
+    display: none;
+}
+.error h3{
+    font-size: 1.4rem;
+    color: var(--white);
+}
+.error button{
+    cursor: pointer;
+    padding: .5rem 1rem;
+    border-radius: 50%;
+    background-color: var(--danger);
+    border: none;
+    font-size: 2rem;
+}
+.error.active{
+    display: flex;
+}
+.modal-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid var(--blue-dark);
+}
+.modal-header h3{
+    font-size: 2rem;
+    text-transform: uppercase;
+}
+#closeModal{
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 1rem 1.5rem;
+}
+.modal-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem 0;
+    border-bottom: 2px solid var(--blue-dark);
+}
+.row{
+    display: flex;
+    gap: 2rem;
+}
+.form-control{
+    display: flex;
+    flex-direction: column;
+}
+.modal-footer{
+    padding: 1rem 0 0;
+    text-align: end;
+}
+.modal-footer button{
+    cursor: pointer;
+}
+
+@media(max-width: 610px){
+    .table-responsive{
+        overflow-x: scroll;
+    }
+}

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD - Avançado</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+</head>
+<body>
+    <div class="page-container">
+        <header class="header">
+            <h1>CRUD - Avançado</h1>
+        </header>
+        
+        <div class="container">
+            <form id="formSearch">
+                <input type="search" id="searchInput" placeholder="Search">
+                <button disabled>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </form>
+            
+            <button id="openModal" class="btn">
+                Novo Usuário
+            </button>
+        </div>
+    
+        <main class="container" id="table-container">
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Nome</th>
+                            <th>Sobrenome</th>
+                            <th>Idade</th>
+                            <th>Email</th>
+                            <th>Ações</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        
+                    </tbody>
+                </table>
+            </div>
+        </main>
+    
+        <footer class="footer">
+            <h3>Desenvolvido por Washington Junior</h3>
+            <h3>Manaus - AM</h3>
+            <h3>2023</h3>
+        </footer>
+
+        <div class="modal">
+            <header class="modal-header">
+                <h3>Cadastrar</h3>
+                <button id="closeModal">
+                    <i class="fas fa-xmark"></i>
+                </button>
+            </header>
+            <div class="error">
+                <h3 id="errorText"></h3>
+                <button id="closeError">
+                    <i class="fas fa-xmark"></i>
+                </button>
+            </div>
+            <form class="modal-form">
+                <div class="row">
+                    <div class="form-control">
+                        <label for="nome">Nome</label>
+                        <input type="text" name="nome" id="nome" data-index="new">
+                    </div>
+                    <div class="form-control">
+                        <label for="sobrenome">Sobrenome</label>
+                        <input type="text" name="sobrenome" id="sobrenome">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-control">
+                        <label for="idade">Idade</label>
+                        <input type="number" name="idade" id="idade">
+                    </div>
+                    <div class="form-control">
+                        <label for="email">Email</label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                </div>
+            </form>
+            <footer class="modal-footer">
+                <button type="submit" id="btnRegister">Cadastrar</button>
+            </footer>
+        </div>
+    </div>
+    
+    <script src="js/script.js"></script>
+</body>
+</html>
