@@ -223,3 +223,19 @@ button i{
         overflow-x: scroll;
     }
 }
+@media(max-width: 428px){
+    .row{
+        flex-direction: column;
+    }
+    .modal{
+        width: 95%;
+    }
+    .row{
+        width: 100%;
+    }
+}
+@media(max-width: 345px){
+    #searchInput{
+        min-width: 95%;
+    }
+}
